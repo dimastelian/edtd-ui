@@ -8,6 +8,12 @@ var App = function() {
     {
         fn.onload = callback;
     };
+    
+    fn.init = function($)
+    {
+        ed.init($);
+
+    }
 
     fn.load = function()
     {
@@ -18,6 +24,7 @@ var App = function() {
                 console.log(fn.onload);
 
                 fn.onload($);
+                fn.init($);
 
             });
 

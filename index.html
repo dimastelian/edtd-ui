@@ -1,35 +1,81 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html id="main">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
         <script type="text/javascript" src="assets/loader.js"></script>
         <script type="text/javascript" src="assets/app/js/app.js"></script>
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-2">
-                        <div class="btn-group btn-group-hg btn-group-vertical" role="group" aria-label="First group">
-                          <button type="button" class="btn btn-danger">PRIM</button>
-                          <button type="button" class="btn btn-secondary">NAV</button>
-                          <button type="button" class="btn btn-secondary">COM</button>
-                          <button type="button" class="btn btn-secondary">SHLD</button>
+            <div class="row"><!-- main row -->
+                <div class="col col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <ul class="nav nav-tabs" role="tablist" aria-label="First group">
+                                <li class="active"><a href="#prim" class="btn btn-link btn-lg" role="tab" data-toggle="tab">PRIM</a></li></li>
+                                <li><a href="#nav" class="btn btn-link btn-lg" role="tab" data-toggle="tab">NAV</a></li>
+                                <li><a href="#com" class="btn btn-link btn-lg" role="tab" data-toggle="tab">COM</a></li>
+                                <li><a href="#shld" class="btn btn-link btn-lg" role="tab" data-toggle="tab">SHLD</a></li>
+                            </ul>
                         </div>
+                        <div class="col-xs-6">
+                            <div class="btn-group btn-group-hg pull-right" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-default btn-lg" id="btnFullScreen">FS</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-10">
-                    <h5>PRIM</h5>
+                <div class="col-xs-12">
+                    <div class="panel">                        
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="prim">
+                                <div class="row">
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>   
+                                    &nbsp;
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>                                    
+                                    &nbsp;
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>
+                                    <div class="col-xs-2"><a class="btn btn-primary btn-lg btn-block">SOME</a></div>                                    
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="nav">
+                                <div style="width: 300px; height: 300px; border:1px solid red;" id="navJoyStick"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="com">COM</div>
+                            <div role="tabpanel" class="tab-pane" id="shld">SHLD</div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div><!-- main row -->
+
         </div>
-        <script>
+        <script>           
             app.load();
+            
         </script>
     </body>
 </html>

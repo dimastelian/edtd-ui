@@ -11,6 +11,7 @@ module.exports = function (grunt) {
                     './src/js/utils.js',
                     './src/js/init.js',
                     './src/js/*/*.js',
+                    './src/js/*/init.js',
                     './src/js/main.js',
                 ],
                 dest: './assets/app/js/app.js',
@@ -79,7 +80,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browserify');
 
-    grunt.registerTask('styles', ['sass:main','sass:bootflat']);
+    grunt.registerTask('styles', ['sass:main']);
     grunt.registerTask('scripts', ['concat:main','uglify:main']);
     grunt.registerTask('build', ['styles', 'scripts']);
 };
